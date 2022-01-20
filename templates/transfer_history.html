@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>SPARKS BANK</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <style>
+    body{
+  
+  background-image: url('https://cutewallpaper.org/21/aquamarine-backgrounds/Aquamarine-Background-Postcards-Zazzle-AU.jpg');
+  background-size: 1850px 800px;
+  height: 100%;
+  }
+    nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #0f0808;
+
+  }
+
+  nav ul{
+    float: right;
+    display: flex;
+  } 
+
+  nav ul li a{
+    line-height: 70px;
+    padding: 0 20px;
+    color: #fff;
+  }
+  nav ul li a:hover{
+    color: #b93939;
+    text-decoration: none;
+  }
+  button {
+   
+   color: #fff;
+   font-size: 16px;
+   width: 80px;
+   border: 0;
+   padding: 10px 0;
+   margin-top: 10px;
+   margin-left: -5px;
+   border-radius: 5px;
+   background-color: green;
+   }
+   button:hover {
+   color: black;
+    }
+
+   
+
+    .t{
+      padding-left:100px;
+      padding-right: 100px;
+      padding-top:150px;
+      font-family: 'Zilla Slab', serif;
+      color: #581d64;
+      font-size: 25px;
+    }
+
+  	</style>
+</head>
+
+<body>
+  <nav>
+      
+    <ul>
+      
+      <li><a href="/">HOME</a></li>
+      <li><a href="/customers" >CUSTOMERS</a></li>
+       <li><a href="/transfer_money" >TRANSFER MONEY</a></li>
+       <li><a href="/transfer_history">TRANSACTION HISTORY</a></li>
+    </ul>
+  </nav>
+
+<section class="t">  
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Sender's Name</th>
+      <th>Receiver's Account Number</th>
+      <th>Amount Transferred</th>
+      <th>Transaction Date</th>
+    </tr>
+  </thead>
+   <tbody>
+    {% for item in data %}
+               <tr>
+               <td>{{item[0]}}</td>
+               <td>{{item[1]}}</td>
+               <td>{{item[2]}}</td>
+               <td>{{item[3]}}</td>
+               </tr>
+    {% endfor %}           
+   </tbody>
+</table>
+</section>
+
+</body>
+</html>        

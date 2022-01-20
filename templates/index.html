@@ -1,0 +1,242 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>SPARKS BANK</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
+  <style>
+body{
+            background-image: url("https://thumbs.dreamstime.com/b/online-banking-banner-website-internet-banking-mobile-phone-green-background-electronic-bank-payment-online-banking-204929154.jpg");
+            background-size: 1850px 800px;
+      
+        }
+       
+       h1{
+            font-family: sans-serif;
+            font-size:40px;
+            margin-top:50px;
+            color:rgb(250, 250, 250);
+        }
+        h2{
+            font-family: sans-serif;
+            
+            color:rgb(15, 10, 15);
+        }
+
+        .panel{
+            background-color: mediumaquamarine;
+            width:50%;
+            height:50%;
+            margin-top:320px;
+            margin-left:50px;
+            border-radius: 0px;
+            box-shadow: 0px 0px 10px rgb(46, 44, 44);
+            
+            }
+            nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #0f0808;
+
+  }
+
+  nav ul{
+    float: right;
+    display: flex;
+  } 
+
+  nav ul li a{
+    line-height: 70px;
+    padding: 0 20px;
+    color: #fff;
+  }
+  nav ul li a:hover{
+    color: #b93939;
+    text-decoration: none;
+  }
+  button {
+   
+   color: #fff;
+   font-size: 16px;
+   width: 80px;
+   border: 0;
+   padding: 10px 0;
+   margin-top: 10px;
+   margin-left: -5px;
+   border-radius: 5px;
+   background-color: green;
+   }
+   button:hover {
+   color: black;
+    }
+
+
+.container{
+width: 1000px;
+position: relative;
+display: flex;
+margin-top:100px;
+justify-content: space-between;
+}
+
+.container .card{
+position: relative;
+cursor: pointer;
+}
+
+.container .card .face{
+width: 300px;
+height: 200px;
+transition: 0.5s;
+}
+
+.container .card .face.face1{
+position: relative;
+background: #333;
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 1;
+transform: translateY(100px);
+}
+
+.container .card:hover .face.face1{
+background: #ff0057;
+transform: translateY(0);
+}
+
+.container .card .face.face1 .content{
+opacity: 0.2;
+transition: 0.5s;
+}
+
+.container .card:hover .face.face1 .content{
+opacity: 1;
+}
+
+.container .card .face.face1 .content img{
+max-width: 100px;
+}
+
+.container .card .face.face1 .content h3{
+margin: 10px 0 0;
+padding: 0;
+color: #fff;
+text-align: center;
+font-size: 1.5em;
+}
+
+.container .card .face.face2{
+position: relative;
+background: #fff;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 20px;
+box-sizing: border-box;
+box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+transform: translateY(-100px);
+}
+
+.container .card:hover .face.face2{
+transform: translateY(0);
+}
+
+.container .card .face.face2 .content p{
+margin: 0;
+padding: 0;
+}
+
+.container .card .face.face2 .content a{
+margin: 15px 0 0;
+display:  inline-block;
+text-decoration: none;
+font-weight: 900;
+color: #333;
+padding: 5px;
+border: 1px solid #333;
+}
+
+.container .card .face.face2 .content a:hover{
+background: #333;
+color: #fff;
+}
+      
+</style>
+
+
+</head>
+
+<body>
+ <nav>
+      
+    <ul>
+      
+      <li><a href="#about">HOME</a></li>
+      <li><a href="/customers" >CUSTOMERS</a></li>
+       <li><a href="/transfer_money" >TRANSFER MONEY</a></li>
+       <li><a href="/transfer_history" >TRANSACTION HISTORY</a></li>
+    </ul>
+  </nav>
+</section>
+<div class="panel" align="center">
+  <img src="https://www.pngitem.com/pimgs/m/531-5313474_bank-png-free-images-bank-clipart-png-transparent.png" width="100" height="100">
+   <h1> 
+       WELCOME TO THE SPARKS BANK
+   </h1>
+   
+   
+   </div></div>
+   <div class="container">
+  <div class="card">
+      <div class="face face1">
+          <div class="content">
+              <img src="https://media.istockphoto.com/vectors/money-transfer-via-mobile-phones-vector-icon-line-outline-art-with-vector-id1044685868?k=20&m=1044685868&s=612x612&w=0&h=oZ8M19sP0MUzQ2PqYta5fBEhYLQJi2JONNb7CjaZCYo=">
+              <h3>Transfer Money</h3>
+          </div>
+      </div>
+      <div class="face face2">
+          <div class="content">
+              <a href="/transfer_money">TRANSFER</a>
+          </div>
+      </div>
+  </div>
+  <div class="card">
+      <div class="face face1">
+          <div class="content">
+              <img src="https://media.istockphoto.com/vectors/target-audience-customer-client-targeting-consumer-centricity-aim-vector-id1017466322?k=20&m=1017466322&s=612x612&w=0&h=GgeoE45goA51nXLJghi7Ccd3KW-0KpRH99NZG_zx9e8=">
+              <h3>View Customers</h3>
+          </div>
+      </div>
+      <div class="face face2">
+          <div class="content">
+           <a href="/customers">View Customers</a>
+          </div>
+      </div>
+  </div>
+  <div class="card">
+      <div class="face face1">
+          <div class="content">
+              <img src="https://thumbs.dreamstime.com/b/transaction-history-rgb-color-icon-e-wallet-application-mobile-banking-app-using-payment-bill-checking-payments-report-isolated-194875666.jpg">
+              <h3>Transaction History</h3>
+          </div>
+      </div>
+      <div class="face face2">
+          <div class="content">
+             <a href="/transfer_history">Transaction History</a>
+          </div>
+      </div>
+  </div>
+</div>
+
+</body>
+</html>  

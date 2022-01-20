@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>SPARKS BANK</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <style >
+  body{
+  
+  background-image: url('https://cutewallpaper.org/21/aquamarine-backgrounds/Aquamarine-Background-Postcards-Zazzle-AU.jpg');
+  background-size: 1850px 800px;
+  height: 100%;
+  }
+    nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #0f0808;
+
+  }
+
+  nav ul{
+    float: right;
+    display: flex;
+  } 
+
+  nav ul li a{
+    line-height: 70px;
+    padding: 0 20px;
+    color: #fff;
+  }
+  nav ul li a:hover{
+    color: #0c0505;
+    text-decoration: none;
+  }
+  button {
+   
+   color: rgb(252, 246, 246);
+   font-size: 16px;
+   width: 80px;
+   border: 0;
+   padding: 10px 0;
+   margin-top: 10px;
+   margin-left: -5px;
+   border-radius: 5px;
+   background-color: rgb(8, 108, 116);
+   }
+   button:hover {
+   color: black;
+    }
+
+   
+
+    .t{
+      padding-left:100px;
+      padding-right: 100px;
+      padding-top:150px;
+      font-family: 'Zilla Slab', serif;
+      color: #581d64;
+      font-size: 25px;
+    }
+
+  	
+
+
+
+
+</style>
+
+
+</head>
+
+<body>
+
+  <nav>
+      
+    <ul>
+      
+      <li><a href="/">HOME</a></li>
+      <li><a href="/customers" ></a>CUSTOMERS</a></li>
+       <li><a href="/transfer_money" >TRANSFER MONEY</a></li>
+       <li><a href="/transfer_history" >TRANSACTION HISTORY</a></li>
+    </ul>
+  </nav>
+
+<section class="t">  
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Account Number</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Contact Number</th>
+      <th>Transfer</th>
+    </tr>
+  </thead>
+   <tbody>
+    {% for item in data %}
+               <tr>
+               <td>{{item[0]}}</td>
+               <td>{{item[1]}}</td>
+               <td>{{item[2]}}</td>
+               <td>{{item[3]}}</td>
+               <td>
+                 <button id="ida3" onclick="document.getElementById('id01').style.display='block'"class="button button1">Transfer</button><br><br>
+               </td>
+               </tr>
+    {% endfor %}           
+   </tbody>
+</table>
+</section>
+
+<div id="id01" class="w3-modal">
+  <div class="w3-modal-content">
+     <span onclick="document.getElementById('id01')"></span>
+
+       <div class="modal-header" style="background-color:#bcd4e6">
+          <h2 class="modal-title"><b>Transfer Money</b></h2>
+      </div>
+
+      <div class="modal-body" style="background-color:#f0f8ff">
+            
+              <form class="form" method="post" action="/history">
+                <label>Sender's Name</label>
+                <input type="name" class="form-control" name="name" required><br>
+                <label>Account Number</label>
+                <input type="number" class="form-control" name="acc" required><br>  
+                <label>Amount</label>
+                <input type="number" class="form-control" name="amount" required><br>               
+                <label>Date</label>
+                <input type="date" class="form-control" name="date" required><br>
+                <input type="submit" class="btn btn-block btn-lg" value="Transfer" style="background-color:#91e4bd">
+              </form>
+              <br>        
+      </div>  
+  </div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+</body>
+</html>        
